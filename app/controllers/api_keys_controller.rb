@@ -28,4 +28,5 @@ class ApiKeysController < ApplicationController
   def destroy
     current_api_key&.destroy
   end
+  # this is a comment
 end
