@@ -21,7 +21,7 @@ class LocationsController < ApplicationController
   def update
     location = Location.find_by(id: params[:id])
     location.name = params[:name] || location.name
-    lcoation.address = params[:address] || location.address
+    location.address = params[:address] || location.address
     location.save
     render json: location.as_json
   end

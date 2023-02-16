@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+  def index
+    render json: User.all
+  end
+  
   def create
     user = User.new(
       first_name: params[:first_name],
@@ -12,6 +16,7 @@ class UsersController < ApplicationController
     else
       render json: { errors: user.errors.full_messages }, status: :bad_request
     end
+  end
 
   def update
     user = User.find_by(id: params[:id])

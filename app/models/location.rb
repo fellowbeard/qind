@@ -1,5 +1,5 @@
 class Location < ApplicationRecord
-  has_many :votes, dependent: :destroy
+  has_many :votes
 
   validates :name, presence: true
 end
