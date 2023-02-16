@@ -3,7 +3,7 @@ class LocationsController < ApplicationController
     locations = Location.all
     render json: locations
   end
-
+  # this thing here is stupid
   def create
     location = Location.new(
       name: params[:name],
